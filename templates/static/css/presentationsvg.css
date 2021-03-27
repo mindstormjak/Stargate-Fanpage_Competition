@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--blue-gray-two);
+}
+
+.slider-container {
+    height: 75vh;
+    width: 75vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 75vw 75vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    /*background-position: center center;
+    background-size: cover;*/
+    position: absolute;
+    top: 0;
+    left: 0; 
+    transition: 0.5s ease;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.arrow {
+    position: fixed;
+    background-color: transparent;
+    padding: 20px;
+    font-size: 50px;
+    color: rgba(255,255,255,0.6);
+    border: none;
+    transform: translateY(-50%);
+    top: 50%;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.arrow.active, button:hover, .exit.active, .download:hover {
+    color:white;
+}
+
+.left-arrow {
+    left: calc(10vw - 75px);
+}
+
+.right-arrow {
+    right: calc(10vw - 75px);
+}
+
+button:focus {
+    outline: none;
+}
+
+.exit {
+    transition: 0.4s ease;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    z-index: 1
+}
+
+.exit:active {transform: scale(0.99);}
+
+.download {
+    transition: 0.4s ease;
+    position: fixed;
+    top: 20px;
+    font-size: 45px;
+    right: 90px;
+    color: rgba(255,255,255,0.5);
+    z-index: 1;
+}
