@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stargate/contact.css">
+    <title>Stargate Fanpage</title>
+</head>
+<body>
+    <div class="title-placeholder"></div>
+    <div class="nav-placeholder"></div>
+    
+    <h1 class="form-title">Hey Gaters, <br>feel free to contact us ...</h1>
+    <div class="row">
+        <div class="column left">
+            <div class="form-container">
+                <form method="POST" class="contact-form">
+                    <h2 class="form-text">Name:</h2>
+                    <input spellcheck="false" id="name" name="name" type="name" required>
+                    <h2 class="form-text">Email:</h2>
+                    <input spellcheck="false" id="email" name="email" type="email" placeholder="name@example.com" required>
+                    <h2 class="form-text">Subject:</h2>
+                    <input spellcheck="false" placeholder="When's the next season?" name="subject" type="text" maxlength="50" required>
+                    <h2 class="form-text">Message:</h2>
+                    <textarea spellcheck="false" id="message" name="message" cols="30" rows="10" maxlength="1024" required></textarea>
+                    <!-- Google reCaptcha 
+                    <div class="g-recaptcha" id="rcaptcha"  data-sitekey="site key"></div>
+                    <span id="captcha" style="color:red" /></span> -->
+                    <button id="submit" type="submit" class="form-custom-submit"></button>
+                    <p style="height: 1px;"></p>
+                </form>
+            </div>
+        </div>
+        
+        <div class="column right">
+            <div class="img-container">
+                <!-- <img src="../static/images/contact.png"> -->
+                <img class="form-img" src="../static/images/contact_sgc1.png" style="height: 65vh; width: auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Google reCaptcha
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+
+    function get_action(form) 
+    {
+        var v = grecaptcha.getResponse();
+        if(v.length == 0)
+        {
+            document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+            return false;
+        }
+        else
+        {
+                document.getElementById('captcha').innerHTML="Captcha completed";
+            return true; 
+        }
+    }
+
+    </script> -->
+
+    <div class="totop-placeholder"></div>
+    <div class="footer-placeholder"></div>
+    <script src="../static/js/autoElement.js"></script>
+    <script>StargateAutoElement();</script>
+    <script src="../static/js/stargate/contact.js"></script>
+</body>
+</html>

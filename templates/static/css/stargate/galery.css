@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    color: var(--blue-gray-two);
+}
+
+h1 {
+    position: relative;
+    left: 25px;
+    padding: 10px;
+}
+
+.galery-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.photo {
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 5px auto;
+    cursor: zoom-in;
+}
+
+.photo img{
+    width: 28vw;
+    height: auto;
+}
+
+.photo .img-container {
+    overflow: hidden;
+    width: 28vw;
+    height: auto;
+}
+
+.photo .img-container img {
+    transition: transform .5s ease;
+}
+
+.photo:hover .img-container img {
+    transform: scale(1.05);
+}
+
+.photo:hover{box-shadow: 0 10px 10px rgba(0,0,0,0.4),0 10px 10px rgba(0,0,0,0.4);}
+
+@media(max-width:800px) {
+    .galery-grid {
+        flex-direction: column;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .photo img, .photo .img-container  {
+        width: 70vw;
+    }
+    
+}

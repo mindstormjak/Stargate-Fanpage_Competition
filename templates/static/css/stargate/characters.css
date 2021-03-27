@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    color: var(--blue-gray-two);
+}
+
+h1 {
+    position: relative;
+    left: 25px;
+    padding: 10px;
+}
+
+.characters {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    width: 100vw;
+}
+
+.character {
+    font-family: 'Caveat';
+    font-size: 28px;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.character h3{
+    position: relative;
+    bottom: -5px;
+    padding: 10px;
+    margin: 2px auto;
+    margin-bottom: 5px;
+}
+
+.character:hover ,.character.active{
+    box-shadow: 0 10px 10px rgba(0,0,0,0.4),0 10px 10px rgba(0,0,0,0.4);
+}
+
+.img-container {
+    height: 400px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+  /* [2] Transition property for smooth transformation of images */
+.img-container img {
+    transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.character:hover .img-container img {
+    transform: scale(1.05);
+}
+
+.character .card {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    font-size: 18px;
+    transition: visibility 0.5s, opacity 0.5s ease;
+}
+
+.character.active .card{
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+}
+
+.character .card p{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 20px;
+}
+
+.character.active .card p{
+    display: block;
+}

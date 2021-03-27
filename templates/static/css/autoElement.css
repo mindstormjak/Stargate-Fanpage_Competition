@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+/* html, body{
+    overflow-x:hidden;
+} */
+
+:root {
+    --blue-gray-one : #21252B;
+    --blue-gray-two : #18222F;
+    --stargate-nav-bg-color: var(--blue-gray-two);
+    --stargate-nav-line-color: rgb(59, 129, 235); /* rgb(59, 129, 235) */
+    --title-gradient-one: linear-gradient(159deg, rgba(0,0,0,1) 0%, rgba(3,41,83,1) 46%, rgba(0,174,209,1) 100%);
+    --title-gradient-current: var(--title-gradient-one);
+}
+
+/* Custom ScrollBar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1E2529;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cbd4dd;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b8babb;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background:#D4D8DC;
+}
+/* ###### */
+
+
+
+/* Nav bar */
+
+.nav-placeholder {
+    position:sticky;
+    top: -5px;
+    z-index: 100;
+}
+
+.stargate-nav {
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    flex-flow: row;
+}
+
+.stargate-nav nav{
+    display:flex;
+    justify-content:center;
+    list-style-type: none;
+}
+
+.stargate-nav nav p{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--stargate-nav-bg-color);
+    border: 4px solid var(--stargate-nav-bg-color);
+    /* box-shadow: 0 4px 4px rgba(0,0,0,0.5); */
+    transition: all 0.3s ease;
+}
+
+.stargate-nav nav button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--stargate-nav-bg-color);
+    border: none;
+    border-top: 4px solid var(--stargate-nav-bg-color);
+    border-bottom: 4px solid var(--stargate-nav-bg-color);
+    /* box-shadow: 0 4px 4px rgba(0,0,0,0.5); */
+    transition: all 0.3s ease;
+}
+
+.stargate-nav nav p a{
+    position: absolute;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.stargate-nav nav p:hover {
+    /* box-shadow: none; */
+    /* transform: scale(0.98); */
+    border-bottom: 4px solid var(--stargate-nav-line-color);
+    transition: all 0.3s ease;
+}
+
+.stargate-nav nav button:hover {
+    border-bottom: 4px solid var(--stargate-nav-line-color);
+    transition: all 0.3s ease;
+}
+
+.stargate-nav nav .nav-button.current {
+    border-bottom: 4px solid var(--stargate-nav-line-color);
+}
+
+.stargate-nav nav p:last-child {
+    width: 10000px;
+}
+
+.stargate-nav nav p:last-child:hover {
+    border: 4px solid var(--stargate-nav-line-color);
+}
+
+.stargate-nav nav button:last-child {
+    width: calc(100vw - 720px);
+    cursor: default;
+}
+
+.stargate-nav nav button:last-child:hover {
+    border: none;
+    border-top: 4px solid var(--stargate-nav-bg-color);
+    border-bottom: 4px solid var(--stargate-nav-bg-color);
+}
+
+/*###############*/
+
+
+/* Title */
+
+.title {
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    height: 75px;
+    color:white;
+}
+
+.title .bg {
+    background: black;
+    background: var(--title-gradient-current);
+    width: 100vw;
+    height: 100px;
+    top: -25px;
+    position: absolute;
+}
+
+/*###############*/
+
+
+/* Footer */
+
+.stargate-footer {
+    /* z-index: 10; */
+    width: 100vw;
+    /* height: 5vh; */
+    height: 50px;
+    background-color: var(--stargate-nav-bg-color);
+    color:white;
+    /* font-size: 1.5vh; */
+    font-size: 14.5px;
+}
+
+.stargate-footer p{
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    /* left: 1.8vw; */
+    left: 40px;
+}
+
+.stargate-footer .text-move{
+    /* padding-top: 1px; */
+    padding-top: 0.3vh;
+}
+
+.stargate-footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.stargate-footer a:hover{
+    font-weight: bold;
+}
+
+/*###############*/
+
+button:focus {
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* Button to top */
+
+.btnToTop {
+    z-index: 10;
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    color: var(--stargate-nav-bg-color);
+    border: none;
+    font-size: 50px;
+    transition: all 0.5s ease;
+}
+
+.btnToTop:hover {
+    color: #303030;
+}
+
+.btnToTop:active{
+    transform: scale(0.98);
+}
+
+/*###############*/

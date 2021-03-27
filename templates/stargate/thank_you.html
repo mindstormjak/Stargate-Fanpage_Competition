@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/stargate/main.css">
+    <title>Stargate Fanpage</title>
+</head>
+<body>
+    <div class="title-placeholder"></div>
+    <div class="nav-placeholder"></div>
+
+    <div class="error-widget">
+        <h1 class="error-code">Thank You!</h1>
+        <p>Thank you for contacting us!<br>
+        We will do our best to answer your message soon</p>
+        <img src="../static/images/stargate_home_address2.png" style="width:auto;height:10vh;">
+    </div>
+
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        sleep(5000).then(() => {
+            window.location.replace("../stargate");
+        })
+    </script>
+
+    <div class="totop-placeholder"></div>
+    <div class="footer-placeholder"></div>
+    <script src="../../static/js/autoElement.js"></script>
+    <script>StargateAutoElement();</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../static/css/stargate/galery_preview.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slide active" style="background-image: url('../../static/images/stargate_galery_01.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_02.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_03.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_04.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_05.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_06.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_07.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_08.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_09.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_10.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_11.jpg');"></div>
+        <div class="slide" style="background-image: url('../../static/images/stargate_galery_12.jpg');"></div>
+        <a class="download" href="../../static/images/stargate_galery_01.jpg" download><i class="fas fa-download"></i></a>
+
+        <button class="arrow left-arrow" id="left">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+        <button class="arrow right-arrow" id="right">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+        <button class="exit" onclick="window.location.href='../galery'">
+            <i class="fas fa-times-circle"></i>
+        </button>
+    </div>
+    <p id="active-img" hidden disabled>{{activeImg}}</p>
+    <script src="../../static/js/autoElement.js"></script>
+    <script>Head();</script>
+    <script src="../../static/js/stargate/galery_preview.js"></script>
+</body>
+</html>
